@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль - ARTlance</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Хедер -->
+  <header class="header border-bottom border-5 py-2">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="logo">ARTlance</div>
+        <nav class="navbar navbar-expand-lg">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">О проекте</a></li>
+            <li class="nav-item"><a class="nav-link" href="uslugi.html">Категории</a></li>
+            <li class="nav-item"><a class="nav-link" href="artists.html">Художники</a></li>
+          </ul>
+        </nav>
+        <div class="login">
+          <img src="https://placehold.co/46x46" alt="Profile" class="rounded-circle">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Профиль -->
+  <section class="profile-section">
+    <div class="container py-5">
+      <!-- Профильная карточка -->
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-avatar-wrapper">
+            <img src="https://placehold.co/222x222" alt="Avatar" class="profile-avatar" id="avatarImage">
+            <div class="avatar-overlay">
+              <span>Сменить<br>аватар</span>
+            </div>
+          </div>
+          
+          <div class="profile-info">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <input type="text" class="profile-name-input" value="Екатерина Кравчюк" id="profileName">
+              <div class="profile-role-toggle">
+                <button class="role-btn active" data-role="artist">Художник ✓</button>
+                <button class="role-btn" data-role="client">Заказчик</button>
+              </div>
+            </div>
+            
+            <p class="profile-registration">Дата регистрации</p>
+            
+            <div class="profile-tags">
+              <span class="profile-tag">3D-моделирование и визуализация</span>
+              <span class="profile-tag">Графический дизайн</span>
+              <span class="profile-tag">Цифровая живопись</span>
+              <button class="profile-tag-add">+</button>
+            </div>
+            
+            <textarea class="profile-description" placeholder="О себе..."></textarea>
+            
+            <div class="profile-contacts">
+              <img src="https://placehold.co/51x51" alt="Telegram">
+              <img src="https://placehold.co/51x51" alt="WhatsApp">
+              <img src="https://placehold.co/51x51" alt="Email">
+            </div>
+            
+            <div class="profile-balance">
+              <span class="balance-label">Баланс, руб</span>
+              <div class="balance-amount">
+                <img src="https://placehold.co/26x26" alt="Wallet">
+                <span>0</span>
+              </div>
+              <div class="balance-buttons">
+                <button class="btn-balance">Вывести</button>
+                <button class="btn-balance">Пополнить</button>
+              </div>
+            </div>
+          </div>
+          
+          <button class="btn-save-profile">Сохранить</button>
+        </div>
+      </div>
+
+      <!-- Заказы -->
+      <div class="section-collapsible" id="ordersSection">
+        <div class="section-header" onclick="toggleSection('orders')">
+          <h2>Заказы</h2>
+          <span class="toggle-arrow" id="ordersArrow">▼</span>
+        </div>
+        <div class="section-content" id="ordersContent">
+          <div class="orders-grid">
+            <div class="order-card">
+              <img src="https://placehold.co/170x192" alt="Service" class="order-image">
+              <div class="order-details">
+                <h3 class="order-title">Название услуги</h3>
+                <p class="order-category">3D-моделирование</p>
+                <p class="order-price">30 000р</p>
+                <p class="order-time">3 часа назад</p>
+                <select class="order-status">
+                  <option value="paid">Оплачен</option>
+                  <option value="in-progress" selected>В работе</option>
+                  <option value="completed">Завершено</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="order-card">
+              <img src="https://placehold.co/170x192" alt="Service" class="order-image">
+              <div class="order-details">
+                <h3 class="order-title">Название услуги</h3>
+                <p class="order-category">3D-моделирование</p>
+                <p class="order-price">30 000р</p>
+                <p class="order-time">3 часа назад</p>
+                <select class="order-status">
+                  <option value="paid" selected>Оплачен</option>
+                  <option value="in-progress">В работе</option>
+                  <option value="completed">Завершено</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="order-card">
+              <img src="https://placehold.co/170x192" alt="Service" class="order-image">
+              <div class="order-details">
+                <h3 class="order-title">Название услуги</h3>
+                <p class="order-category">3D-моделирование</p>
+                <p class="order-price">30 000р</p>
+                <p class="order-time">3 часа назад</p>
+                <select class="order-status">
+                  <option value="paid">Оплачен</option>
+                  <option value="in-progress">В работе</option>
+                  <option value="completed" selected>Завершено</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="order-card">
+              <img src="https://placehold.co/170x192" alt="Service" class="order-image">
+              <div class="order-details">
+                <h3 class="order-title">Название услуги</h3>
+                <p class="order-category">3D-моделирование</p>
+                <p class="order-price">30 000р</p>
+                <p class="order-time">3 часа назад</p>
+                <select class="order-status">
+                  <option value="paid">Оплачен</option>
+                  <option value="in-progress" selected>В работе</option>
+                  <option value="completed">Завершено</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-4">
+            <button class="btn-view-all">Смотреть всё</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Портфолио -->
+      <div class="section-collapsible" id="portfolioSection">
+        <div class="section-header" onclick="toggleSection('portfolio')">
+          <h2>Портфолио</h2>
+          <div class="header-actions">
+            <button class="btn-add-card" onclick="openPortfolioModal()">+</button>
+            <span class="toggle-arrow" id="portfolioArrow">▼</span>
+          </div>
+        </div>
+        <div class="section-content" id="portfolioContent">
+          <div class="portfolio-grid">
+            <div class="portfolio-card editable" onclick="openPortfolioModal(this)">
+              <img src="https://placehold.co/271x306" alt="Portfolio" class="portfolio-image">
+              <div class="portfolio-edit-overlay">
+                <span>Редактировать</span>
+              </div>
+            </div>
+            
+            <div class="portfolio-card" onclick="openPortfolioModal(this)">
+              <img src="https://placehold.co/271x306" alt="Portfolio" class="portfolio-image">
+            </div>
+            
+            <div class="portfolio-card" onclick="openPortfolioModal(this)">
+              <img src="https://placehold.co/271x306" alt="Portfolio" class="portfolio-image">
+            </div>
+            
+            <div class="portfolio-card" onclick="openPortfolioModal(this)">
+              <img src="https://placehold.co/271x306" alt="Portfolio" class="portfolio-image">
+            </div>
+            
+            <div class="portfolio-card" onclick="openPortfolioModal(this)">
+              <img src="https://placehold.co/271x306" alt="Portfolio" class="portfolio-image">
+            </div>
+            
+            <div class="portfolio-card add-card" onclick="openPortfolioModal()">
+              <span class="add-icon">Добавить</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Услуги -->
+      <div class="section-collapsible" id="servicesSection">
+        <div class="section-header" onclick="toggleSection('services')">
+          <h2>Услуги</h2>
+          <div class="header-actions">
+            <button class="btn-add-card" onclick="openServiceModal()">+</button>
+            <span class="toggle-arrow" id="servicesArrow">▼</span>
+          </div>
+        </div>
+        <div class="section-content" id="servicesContent">
+          <div class="services-grid">
+            <div class="service-item editable" onclick="openServiceModal(this)">
+              <img src="https://placehold.co/364x411" alt="Service" class="service-image">
+              <div class="service-edit-overlay">
+                <span>Редактировать</span>
+              </div>
+              <div class="service-info">
+                <h3 class="service-title">Название услуги</h3>
+                <p class="service-category">3D-моделирование</p>
+                <div class="service-bottom">
+                  <p class="service-price">от 30 000р</p>
+                  <p class="service-time">3 часа назад</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="service-item" onclick="openServiceModal(this)">
+              <img src="https://placehold.co/364x411" alt="Service" class="service-image">
+              <div class="service-info">
+                <h3 class="service-title">Название услуги</h3>
+                <p class="service-category">3D-моделирование</p>
+                <div class="service-bottom">
+                  <p class="service-price">от 30 000р</p>
+                  <p class="service-time">3 часа назад</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="service-item add-card" onclick="openServiceModal()">
+              <span class="add-icon">Добавить</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Отзывы -->
+      <div class="section-collapsible" id="reviewsSection">
+        <div class="section-header" onclick="toggleSection('reviews')">
+          <h2>Отзывы</h2>
+          <span class="toggle-arrow" id="reviewsArrow">▼</span>
+        </div>
+        <div class="section-content" id="reviewsContent">
+          <div class="reviews-list">
+            <div class="review-card">
+              <img src="https://placehold.co/108x108" alt="User" class="review-avatar">
+              <div class="review-content">
+                <h4 class="review-name">Ермакова Мария</h4>
+                <p class="review-text">Большое спасибо! Выполнено все быстро качественно. Буду обращаться еще.</p>
+              </div>
+            </div>
+            
+            <div class="review-card">
+              <img src="https://placehold.co/108x108" alt="User" class="review-avatar">
+              <div class="review-content">
+                <h4 class="review-name">Елько Александр</h4>
+                <p class="review-text">Большое спасибо!</p>
+              </div>
+            </div>
+            
+            <div class="review-card">
+              <img src="https://placehold.co/108x108" alt="User" class="review-avatar">
+              <div class="review-content">
+                <h4 class="review-name">Строгая Наталья</h4>
+                <p class="review-text">Выполнено все быстро качественно. Буду обращаться еще.</p>
+              </div>
+            </div>
+            
+            <div class="review-card">
+              <img src="https://placehold.co/108x108" alt="User" class="review-avatar">
+              <div class="review-content">
+                <h4 class="review-name">Лисицин Ванечка</h4>
+                <p class="review-text">СУПЕР КЛАСС ЛАЙК РЕСПЕКТ. ОЧЕНЬ КРУТО СДЕЛАЛА И НЕ ДОРОГО. БЕРИТЕ НЕ ПОЖАЛЕЕТЕ!!!!!!!!!!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Модальное окно для портфолио -->
+  <div class="modal-overlay" id="portfolioModal" onclick="closeModalOnOverlay(event, 'portfolioModal')">
+    <div class="modal-content">
+      <h3 class="modal-title">Портфолио</h3>
+      <input type="text" class="modal-input" placeholder="Название работы">
+      <div class="modal-image-upload">
+        <span>Добавить изображение</span>
+      </div>
+      <div class="modal-buttons">
+        <button class="btn-modal-save" onclick="savePortfolio()">Сохранить</button>
+        <button class="btn-modal-delete" onclick="deletePortfolio()">Удалить</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно для услуг -->
+  <div class="modal-overlay" id="serviceModal" onclick="closeModalOnOverlay(event, 'serviceModal')">
+    <div class="modal-content modal-content-large">
+      <h3 class="modal-title">Создание услуги</h3>
+      <div class="modal-image-upload large">
+        <span>Добавить изображение</span>
+      </div>
+      <input type="text" class="modal-input" placeholder="Название услуги">
+      <input type="text" class="modal-input" placeholder="Категория">
+      <input type="number" class="modal-input small" placeholder="Цена">
+      <textarea class="modal-textarea" placeholder="Подробное описание..."></textarea>
+      <div class="modal-buttons">
+        <button class="btn-modal-save" onclick="saveService()">Сохранить</button>
+        <button class="btn-modal-delete" onclick="deleteService()">Удалить</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Футер -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3 class="footer-logo">ARTlance</h3>
+          <p>фриланс-биржа</p>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h4 class="mb-3 fw-black">О ARTlance</h4>
+          <a href="#" class="d-block text-white text-decoration-none mb-2">О проекте</a>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="mb-3 fw-black">Полезное</h4>
+          <a href="#" class="d-block text-white text-decoration-none mb-2">Заказчикам</a>
+          <a href="#" class="d-block text-white text-decoration-none mb-2">Художникам</a>
+          <a href="#" class="d-block text-white text-decoration-none mb-2">Вопрос-Ответ</a>
+          <a href="#" class="d-block text-white text-decoration-none mb-2">Поддержка</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Функция для переключения секций
+    function toggleSection(sectionName) {
+      const content = document.getElementById(sectionName + 'Content');
+      const arrow = document.getElementById(sectionName + 'Arrow');
+      
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+        arrow.textContent = '▼';
+      } else {
+        content.style.display = 'none';
+        arrow.textContent = '▶';
+      }
+    }
+
+    // Функции для модальных окон
+    function openPortfolioModal(card) {
+      document.getElementById('portfolioModal').style.display = 'flex';
+    }
+
+    function openServiceModal(card) {
+      document.getElementById('serviceModal').style.display = 'flex';
+    }
+
+    function closeModalOnOverlay(event, modalId) {
+      if (event.target.classList.contains('modal-overlay')) {
+        document.getElementById(modalId).style.display = 'none';
+      }
+    }
+
+    function savePortfolio() {
+      alert('Портфолио сохранено!');
+      document.getElementById('portfolioModal').style.display = 'none';
+    }
+
+    function deletePortfolio() {
+      if (confirm('Удалить работу из портфолио?')) {
+        alert('Работа удалена!');
+        document.getElementById('portfolioModal').style.display = 'none';
+      }
+    }
+
+    function saveService() {
+      alert('Услуга сохранена!');
+      document.getElementById('serviceModal').style.display = 'none';
+    }
+
+    function deleteService() {
+      if (confirm('Удалить услугу?')) {
+        alert('Услуга удалена!');
+        document.getElementById('serviceModal').style.display = 'none';
+      }
+    }
+
+    // Переключение роли
+    document.querySelectorAll('.role-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
