@@ -2059,3 +2059,397 @@ body {
 }
 
 }
+
+/* ==================== */
+/* Страница заказа      */
+/* ==================== */
+
+.order-page-section {
+  background: #416D92;
+  padding: 20px 0 60px;
+}
+
+.order-page-card {
+  background: #fff;
+  border-radius: 0;
+  padding: 50px 40px 40px;
+}
+
+.order-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.order-page-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #000;
+}
+
+.order-page-published {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  white-space: nowrap;
+  padding-top: 8px;
+}
+
+/* Изображение услуги */
+.order-page-image {
+  background: #000;
+  border-radius: 5px;
+  width: 100%;
+  height: 400px;
+}
+
+/* Профиль художника */
+.order-page-artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.order-page-avatar-wrapper {
+  margin-bottom: 15px;
+}
+
+.order-page-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  object-fit: cover;
+}
+
+.order-page-artist-name {
+  font-size: 34px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.order-page-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.order-page-tag {
+  background: #D4DFE8;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.order-page-artist-desc {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.order-page-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.order-page-contacts-label {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.order-page-contacts-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.order-page-contact-icon img {
+  width: 51px;
+  height: 51px;
+  transition: opacity 0.3s ease;
+}
+
+.order-page-contact-icon:hover img {
+  opacity: 0.7;
+}
+
+/* Детали услуги */
+.order-page-details {
+  margin-top: 30px;
+}
+
+.order-page-detail-item {
+  margin-bottom: 20px;
+}
+
+.order-page-detail-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.order-page-detail-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0;
+}
+
+/* Способ оплаты */
+.order-page-payment {
+  background: #D9D9D9;
+  border-radius: 5px;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+.order-page-payment-method {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+}
+
+.order-page-payment-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Кнопка Купить */
+.order-page-buy-wrapper {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.order-page-buy-btn {
+  background: #416D92;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 14px 0;
+  width: 336px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.order-page-buy-btn:hover {
+  background: #2e5474;
+}
+
+/* Секция отзывов */
+.order-page-reviews {
+  margin-top: 40px;
+}
+
+.order-page-reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.order-page-reviews-title {
+  font-size: 34px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.order-page-leave-review-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.order-page-leave-review-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Карточка отзыва */
+.order-page-review-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 11px 27px;
+  margin-bottom: 20px;
+}
+
+.order-page-review-avatar {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.order-page-review-avatar-placeholder {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: #000;
+  flex-shrink: 0;
+}
+
+.order-page-review-content {
+  flex: 1;
+}
+
+.order-page-review-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.order-page-review-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0;
+}
+
+/* Адаптивность страницы заказа */
+@media (max-width: 991px) {
+  .order-page-card {
+    padding: 30px 20px;
+  }
+
+  .order-page-title {
+    font-size: 28px;
+  }
+
+  .order-page-header {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .order-page-artist-name {
+    font-size: 28px;
+  }
+
+  .order-page-contacts-label {
+    font-size: 20px;
+  }
+
+  .order-page-avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .order-page-reviews-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-page-image {
+    height: 280px;
+    margin-bottom: 20px;
+  }
+
+  .order-page-artist {
+    padding: 0;
+  }
+
+  .order-page-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .order-page-artist-name {
+    font-size: 24px;
+  }
+
+  .order-page-tag {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .order-page-contacts {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-page-payment {
+    max-width: 100%;
+  }
+
+  .order-page-buy-wrapper {
+    max-width: 100%;
+  }
+
+  .order-page-buy-btn {
+    width: 100%;
+  }
+
+  .order-page-review-avatar,
+  .order-page-review-avatar-placeholder {
+    width: 70px;
+    height: 70px;
+  }
+
+  .order-page-review-name {
+    font-size: 18px;
+  }
+
+  .order-page-review-text {
+    font-size: 14px;
+  }
+
+  .order-page-contact-icon img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-page-card {
+    padding: 20px 15px;
+  }
+
+  .order-page-review-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .order-page-review-avatar,
+  .order-page-review-avatar-placeholder {
+    width: 60px;
+    height: 60px;
+  }
+}
